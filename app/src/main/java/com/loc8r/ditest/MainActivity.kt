@@ -13,7 +13,11 @@ class MainActivity : AppCompatActivity() {
      * to help others too.  YOu can walk through each step by checking out different branches.
      *
      * This Project contains one activity and one separate class, that will need to be injected
-     * called SecretInfo
+     * called SecretInfo.
+     *
+     * STEP #2. Install Dagger2 Dependencies.  See comments in the module build.gradle file for
+     * more information on what this entails.
+     *
      */
     val info = SecretInfo()
 

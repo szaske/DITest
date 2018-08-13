@@ -1,8 +1,11 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+/**
+ * This first requirements is to add the kotlin-kapt plugin.  This gives you the ability to use
+ * annotation processors in Kotlin
+ */
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -23,6 +26,16 @@ android {
 }
 
 dependencies {
+    /**
+     * Then add these next 2 Dagger2 dependencies, and sync Gradle
+     */
+    implementation 'com.google.dagger:dagger:2.17'
+    kapt 'com.google.dagger:dagger-compiler:2.17'
+
+    /**
+     * I'm building this project on 8/13/18 so the latest version is 2.17
+     */
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
