@@ -18,6 +18,12 @@ class MainActivity : AppCompatActivity() {
      * STEP #2. Install Dagger2 Dependencies.  See comments in the module build.gradle file for
      * more information on what this entails.
      *
+     * STEP #3. Creating the Dagger2 Interface.
+     *       3a. Create a new package called 'di'
+     *       3b. Create a new Kotlin interface file in that folder called AppComponent.
+     *
+     * See comments in AppComponent.kt for more information on this step.
+     *
      */
     val info = SecretInfo()
 
