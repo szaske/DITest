@@ -25,6 +25,16 @@ class MainActivity : AppCompatActivity() {
      * See comments in AppComponent.kt for more information on this step.
      *
      */
+
+    /**
+     * This (the following line of code) is the ugly line of code we want to get rid of.  Why is it
+     * so ugly?  It's ugly because it's instantiating a dependency.  In the world of software
+     * development that means that this activity source code is dependent on another class to run.
+     * Dagger2 helps developers write code that supports the 'Separation of concerns'
+     * @see https://en.wikipedia.org/wiki/Separation_of_concerns...and this code as written does
+     * not.  In this simple example 'Separation of concerns' is overkill, but it's good practice
+     * to follow it on professional projects.
+     */
     val info = SecretInfo()
 
     override fun onCreate(savedInstanceState: Bundle?) {
